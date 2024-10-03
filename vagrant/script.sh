@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# add docker group and add vagrant user to docker group
-newgrp docker
-usermod -aG docker vagrant
-groups
-
 # Add Docker's official GPG key:
 apt-get update
 apt-get install -y ca-certificates curl virtualbox-guest-utils
@@ -27,6 +22,10 @@ cat /vagrant/.docker_password | docker login --username automator2 --password-st
 
 # test docker
 docker run hello-world
-docker rm -f $(docker ps -f IMAGE=hello-world -q)
+docker rm -f $(docker ps -f status=exited -q)
 docker image rm -f hello-world
 
+# add docker group and add vagrant user to docker group
+newgrp docker
+usermod -aG docker vagrant
+groups vagrant
