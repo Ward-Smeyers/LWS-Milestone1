@@ -4,8 +4,8 @@ Set up a containerized web stack using a Dockerfile and Compose (30% PE)
 
 For this individual assignment, you will create a document and a video as proof that explains how you created a Dockerfile and docker-compose.yaml file to set up a LAMP stack. You will also use Generative AI as a tool to help you make your code better and increase your understanding of the containerization. Use Vagrant to set up a VM to create your solution. The goal of the assignment is to set up the following at the minimum:
 
-    an Apache2 container, serving a web page,
-    another container which will run MySQL.
+- an Apache2 container, serving a web page,
+- another container which will run MySQL.
 
 You might need additional containers, depending on how you choose to complete the assignment (All roads lead to Rome) and if you are willing to go the extra mile for extra credits!
 
@@ -23,15 +23,15 @@ Bonus points (3 extra points): you can earn these bonus points by encrypting the
 
 The rules again:
 
-    Using generative AI to help you solve the challenge is mandatory! Check the Generative AI Policy to learn more on how to use this correctly.
-    At the end of the document, you should include all the prompts and the responses (in clear text, no screenshots) that helped you create the code, improve it or increased your knowledge and understanding of the material.
-    Write a reflection on how AI helped you and what you learned from it.
-    Without providing the necessary prompts and reflections, we cannot evaluate your understanding of the assignment and we can thus not give you any points. 
-    Don’t copy each other's document, we will use Turnitin to check for plagiarism
-    Include your name in your Linux username. Use contapa2-m1-<yourinitials> for your apache container, use contsql-m1-<yourinitials> for your MySQL container
-    Your document has a nice, professional layout and a proper introduction and conclusion
-    Document every step and command you enter to accomplish this. User readable screenshots. Explain every parameter and option inside the commands as well. What does it do and why are you using it?
-    Show your Dockerfile and Docker-compose file and explain every line in detail. Also include the other files you used, if any.
+  - Using generative AI to help you solve the challenge is mandatory! Check the Generative AI Policy to learn more on how to use this correctly.
+  At the end of the document, you should include all the prompts and the responses (in clear text, no screenshots) that helped you create the code, improve it or increased your knowledge and understanding of the material.
+  - Write a reflection on how AI helped you and what you learned from it.
+  - Without providing the necessary prompts and reflections, we cannot evaluate your understanding of the assignment and we can thus not give you any points. 
+  - Don’t copy each other's document, we will use Turnitin to check for plagiarism
+  - Include your name in your Linux username. Use contapa2-m1-<yourinitials> for - your apache container, use contsql-m1-<yourinitials> for your MySQL container
+  - Your document has a nice, professional layout and a proper introduction and conclusion
+  - Document every step and command you enter to accomplish this. User readable screenshots. Explain every parameter and option inside the commands as well. What does it do and why are you using it?
+  -Show your Dockerfile and Docker-compose file and explain every line in detail. Also include the other files you used, if any.
 
 Good luck and don’t forget to have fun!
 

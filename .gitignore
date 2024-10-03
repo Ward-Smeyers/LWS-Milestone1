@@ -2,3 +2,5 @@
 .vagrant
 .env
 .docker_password
+*.docx
+*.pdf
