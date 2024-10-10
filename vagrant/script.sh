@@ -20,12 +20,10 @@ apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin do
 # login to docker hub, recwiers .docker_password file vagrant synced_folder
 cat /vagrant/.docker_password | docker login --username automator2 --password-stdin
 
-# test docker
-docker run hello-world
-docker rm -f $(docker ps -f status=exited -q)
-docker image rm -f hello-world
-
 # add docker group and add vagrant user to docker group
 newgrp docker
 usermod -aG docker vagrant
 groups vagrant
+
+# start docker compose
+docker compose -f /docker/compose.yaml up -d
