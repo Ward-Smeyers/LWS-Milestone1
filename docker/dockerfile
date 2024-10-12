@@ -1,9 +1,7 @@
 FROM ubuntu:24.04
 
 EXPOSE 80
-EXPOSE 8080
 EXPOSE 443
-EXPOSE 4443
 
 RUN apt-get update && apt-get install -y apache2 && mkdir -p /var/run/apache2 && chown www-data:www-data /var/run/apache2
 COPY ./apache2/apache2.conf /etc/apache2/apache2.conf
