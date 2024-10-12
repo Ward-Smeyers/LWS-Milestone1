@@ -2,15 +2,12 @@ services:
   app:
     build: .
     container_name: contapa2-m1-ws
-    user: www-data
+    # user: www-data
     ports:
       - 8080:80
       - 4443:443
-    environment:
-      - DB_HOST=db
-      - DB_USER=${MYSQL_USER}
-      - DB_PASSWORD=${MYSQL_PASSWORD}
-      - DB_NAME=${MYSQL_DATABASE}
+    env_file:
+      - .env
     depends_on:
       - db
 
