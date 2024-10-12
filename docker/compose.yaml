@@ -1,0 +1,29 @@
+services:
+  app:
+    build: .
+    container_name: contapa2-m1-ws
+    # user: www-data
+    ports:
+      - 8080:80
+      - 4443:443
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: contsql-m1-ws
+    # user: contsql-m1-ws
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql_db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+
+volumes:
+  mysql_db:
