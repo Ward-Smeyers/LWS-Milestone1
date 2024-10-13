@@ -2,7 +2,6 @@ services:
   app:
     build: .
     container_name: contapa2-m1-ws
-    user: www-data
     volumes:
       - ./website:/var/www/html/website
     ports:
