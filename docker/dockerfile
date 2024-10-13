@@ -8,6 +8,5 @@ COPY ./apache2/apache2.conf /etc/apache2/apache2.conf
 COPY ./apache2/ports.conf /etc/apache2/ports.conf
 COPY ./apache2/000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY ./apache2/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
-COPY ./website/ /var/www/html/website
 
 CMD apache2 -D FOREGROUND
