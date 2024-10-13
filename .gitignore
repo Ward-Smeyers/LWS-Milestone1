@@ -1,4 +1,5 @@
 
+.vscode
 .vagrant
 .env
 .docker_password
