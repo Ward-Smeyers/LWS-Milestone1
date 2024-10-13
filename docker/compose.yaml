@@ -2,19 +2,21 @@ services:
   app:
     build: .
     container_name: contapa2-m1-ws
-    # user: www-data
+    user: www-data
+    volumes:
+      - ./website:/var/www/html/website
     ports:
-      - 8080:80
+      - 8085:80
       - 4443:443
     env_file:
       - .env
     depends_on:
       - db
+    restart: unless-stopped
 
   db:
     image: mysql:8.0
     container_name: contsql-m1-ws
-    # user: contsql-m1-ws
     ports:
       - 3306:3306
     volumes:
