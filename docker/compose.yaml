@@ -15,8 +15,16 @@ services:
     build: ./apache2
     volumes:
       - ./website:/var/www/html/website
-    env_file:
-      - .env
+    environment:
+      - APACHE_ROOT_DIR={APACHE_ROOT_DIR}
+      - APACHE_RUN_DIR={APACHE_RUN_DIR}
+      - APACHE_RUN_USER={APACHE_RUN_USER}
+      - APACHE_RUN_GROUP={APACHE_RUN_GROUP}
+      - APACHE_LOG_DIR={APACHE_LOG_DIR}
+      - APACHE_PID_FILE={APACHE_PID_FILE}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     depends_on:
       - db
       - proxy
