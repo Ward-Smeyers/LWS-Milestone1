@@ -25,5 +25,10 @@ newgrp docker
 usermod -aG docker vagrant
 groups vagrant
 
+# create certificates
+docker run -v /docker/lego:/opt/lego --env-file /docker/.env goacme/lego:latest --email=Ward.Smeyers@student.thomasmore.be --dns cloudflare --path=/opt/lego --domains milestone1.smeyers.xyz run
+openssl x509 -in lego/certificates/milestone1.smeyers.xyz.crt -noout -text | head -15
+docker rm -f $(docker ps -f status=exited -q)
+
 # start docker compose
 docker compose -f /docker/compose.yaml up -d
