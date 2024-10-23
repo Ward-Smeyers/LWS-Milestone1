@@ -1,6 +1,6 @@
 FROM ubuntu:24.04
 
-RUN apt-get update && apt-get install -y apache2 php libapache2-mod-php php-mysqli 
+RUN apt-get update && apt-get install -y apache2 php php-fpm php-mysqli 
 RUN mkdir -p /var/run/apache2 && chown www-data:www-data /var/run/apache2
 
 CMD apache2 -D FOREGROUND
