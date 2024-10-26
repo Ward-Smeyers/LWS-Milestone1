@@ -13,7 +13,7 @@ Your image will be based on Ubuntu 24.04. The Apache2 webserver will install aut
 
 The container with the MySQL server will be connected with a database, containing only 1 record which contains your full name. 
 
-When you run the containers, a web page with the text "<Student name> has reached Milestone 1!!" will appear on your screen. This webpage is accessible on your Linux server on port 8085. You will query your name out of the MySQL database. Your data files (your webfile and your database) are not located in your containers but are located on your Linux machine.
+When you run the containers, a web page with the text "\<Student name> has reached Milestone 1!!" will appear on your screen. This webpage is accessible on your Linux server on port 8085. You will query your name out of the MySQL database. Your data files (your webfile and your database) are not located in your containers but are located on your Linux machine.
 
 When you change your name in the database, your web page will automatically update the information (after a browser refresh). The data in your database is also persistent, which means that if you remove your containers and restart your stack, the data will still be present in the database. Explain in your documentation why this is. You must also provide proof of this using a very short video (maximum length: 1 minute)
 

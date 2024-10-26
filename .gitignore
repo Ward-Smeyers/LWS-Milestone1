@@ -1,6 +1,12 @@
 
+.vscode
 .vagrant
 .env
 .docker_password
 *.docx
 *.pdf
+.idea
+lego
+keys
+certificates
+SQL*
