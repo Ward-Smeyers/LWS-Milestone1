@@ -6,26 +6,14 @@
 </head>
 <body class="container">
     <?php
-        $hostname = 'db';
-        $username = "sql-m1-ws";
-        $password = "moliufytdrseqzaesedcfvghjkqsfdgfh";
-        $database = "Milestone1";
 
-        // $hostname = $_ENV["MYSQL_HOSTNAME"];
-        // $user = $_ENV["MYSQL_USER"];
-        // $passwd = $_ENV["MYSQL_PASSWORD"];
-        // $db = $_ENV["MYSQL_DATABASE"];
+        $hostname = getenv('MYSQL_HOSTNAME');
+        $username = getenv('MYSQL_USER');
+        $password = getenv('MYSQL_PASSWORD');
+        $database = getenv('MYSQL_DATABASE');
 
         // echo "<p class='text-center'>Connecting to database...</p>";
         $connection = mysqli_connect ($hostname, $username, $password, $database); 
-        if (! $connection) 
-        { 
-          die ("A connection to the Server could not be established!"); 
-        } 
-        // else 
-        // { 
-        //   echo "<p class='text-center'>User '",$username, "' logged into to MySQL server ", $hostname, " successfully.</p>"; 
-        // } 
 
         $result = $connection->query("SELECT name, surname FROM Milestone1.name WHERE id = 1");
 
@@ -34,8 +22,6 @@
                 $name = $row["name"];
                 $surname = $row["surname"];
             }
-        } else {
-            echo "<p class='text-center'>0 results</p>";
         }
         
         $connection->close( );
