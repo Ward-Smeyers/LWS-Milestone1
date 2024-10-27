@@ -38,7 +38,7 @@
         <div class="col-7 col-lg-8 pe-5 ">
             <p class="text-center mt-3 mb-0">Server Name: <?php echo $_SERVER['SERVER_NAME']; ?> </p>
             <p class="text-center mb-0">Server IP: <?php echo $_SERVER['SERVER_ADDR']; ?> </p>
-            <p class="text-center mb-0">Contaner ID: <?php echo php_uname('n'); ?> </p>
+            <p class="text-center mb-0">Container ID: <?php echo php_uname('n'); ?> </p>
         </div>
     </div>
 </body>
